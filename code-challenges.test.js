@@ -17,15 +17,38 @@
 // --------------------1) Create a function that takes in an array, removes the first item from the array and shuffles the remaining content.
 
 // a) Create a test with an expect statement using the variable provided.
+describe ("shuffleArray", () => {   
+    test("removes the first item from the array and shuffles the remaining content", () => {
 
 var colors1 = ["purple", "blue", "green", "yellow", "pink"]
 // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
 var colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
 // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+expect(shuffleArray(colors1)).toEqual(["yellow", "blue", "pink", "green"])
+expect(shuffleArray(colors1)).toEqual(["saffron", "aquamarine", "periwinkle", "ochre"])
 
+
+     })
+})
 
 
 // b) Create the function that makes the test pass.
+
+//first thing first i made the test fail thats a good thing now i am going to start thinking about my logic
+// 1. of course make a const 
+// 2.the function is going to be called shuffleArray
+// 3.so, what i am going to use is for loop
+// 4. i am going to use shift()
+// 5.and to shuffle my words around that is kinda tricky cause i was thinking of using reverse but we are not trying to move the last word to the beginning.
+// 6.So, i decided to use sort() and math.random now lets do this if i do add anything i will explain it while i go along.
+
+       
+        
+    
+
+
+
+
 
 
 
@@ -35,7 +58,7 @@ var colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saf
 
 var nums1 = [3, 56, 90, -8, 0, 23, 6]
 // Expected output: [-8, 90]
-var nums2 = [109, 5, 9, 67 8, 24]
+var nums2 = [109, 5, 9, 67, 8, 24]
 // Expected output: [5, 109]
 
 
