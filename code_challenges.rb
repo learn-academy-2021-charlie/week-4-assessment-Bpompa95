@@ -51,6 +51,10 @@ def shuffle (array_of_words, letter)
 # the method needs two things which is string and vowels
 # what we want back is to remove all the vowels from the string
 # so for sure we will be using the delete () 
+# still need to work on this 
+# alright going back to this so i set up my method no_vowels and in my place holder i put string because we to select or delete the vowels in the word 
+# so on line 68 i basically said like hey in my string delete the vowels which is aeiou
+
 
 
 album1 = 'Rubber Soul'                 
@@ -60,7 +64,14 @@ album2 = 'Sgt Pepper'
 album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
-
+# created a method with no_vowels and in my placeholder i put string 
+def no_vowels(string)
+    # i use delete becuase i wanted to take the vowels i have in a string 
+    string.delete("aeiouAEIOU")
+  end
+    p no_vowels(album1)
+    p no_vowels(album2)
+    p no_vowels(album3)
 
 
     
@@ -75,22 +86,33 @@ album3 = 'Abbey Road'
 
 
 # --------------------3a) Create a class called Bike that is initialized with a model, wheels, and current_speed. The default number of wheels is 2. The current_speed should start at 0. Create a get_info method that returns a sentence with all the data from the bike object.
-# i created a class that says bike
-# for the initialized i used model, wheels, and current_speed
-# then for each of those i used the @symbole
-# then i created my info with a sentence 
-# it did not work but not giving up 
-class bike
-    def initialized(model, wheels, current_speed)
-        @model = Trekbike
+
+
+class Bike
+    def initialize(model)
+        @model = model
         @wheels = 2
-        @current_speed = 0 mph
+        @current_speed = 0 
     end
-    def get_info
-        "The #{@model} has #{@wheels} and is going #{@current_speed}"
+    def bike_info
+        "the #{@model} bike has #{@wheels} wheels and is going #{@current_speed} mph."
+    end
+    def pedal_faster
+        @current_speed += 10
+    end
+    def brake
+        @current_speed -= 10
     end
 end
+trek = Bike.new "Trek"
+p trek
+p trek.bike_info
+p trek.pedal_faster
+p trek.brake
 
+
+
+    
 # Expected output example: 'The Trek bike has 2 wheels and is going 0 mph.'
 
 
